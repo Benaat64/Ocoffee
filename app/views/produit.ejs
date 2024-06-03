@@ -1,0 +1,27 @@
+<%- include('header') %>
+<body>
+    <div class="illustration-produit">
+        <img src="/img/<%=coffee.name%>.png">
+        <h1></h1>
+    </div>
+ 
+
+
+    <div class="container-produit">
+        <h2> <%= coffee.name %></h2>
+        <h2> Référence: <%= coffee.reference %></h2>
+        <h2> Origine: <%= coffee.origine %></h2>
+        <h2> Prix: <%= coffee.prix %>€</h2>
+        <h2> <%= coffee.caractéristique %></h2>
+        <h2> <%= coffee.status %></h2>
+
+
+        <p class="date">Publié le: <%= coffee.date %></p>
+        <h2><%= coffee.description %></h2>
+        <a href="/produit/<%=coffee.id%>" class="btn">Catalogue</a>
+    </div>
+    
+  
+ <script src="/js/header.js"></script>
+</body>
+</html>

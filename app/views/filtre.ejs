@@ -1,0 +1,36 @@
+<%-include('header')%>
+<body>
+    <div class="container-catalogue">
+        <img src="img/tata.png">
+        <h1>NOTRE CATALOGUE</h1>
+    </div>
+    <h1 id="title-category"> Trié par:<%=selectedCategory%></h1>
+    <div class="news">
+
+        <form action="/filtre" method="get">
+            <select name="category" id="">
+                <option value="name">Nom</option>
+                <option value="origine">Origine</option>
+                <option value="caractéristique">Caractéristique</option>
+                <option value="disponible">Disponible</option>
+                <option value="reference">Reference</option>
+                <option value="prix">Prix</option>
+            </select>
+            <input type="submit" value="Chercher">
+        </form>
+        
+    <div class="container-news">
+        <% for(const category of categories){ %>
+            <div class="decouvrir">
+                <img src="/img/<%=category.name%>.png">
+                <h3><%=category.name%></h3>
+                <h3><%=category.prix%>€</h3>
+                <h3><%=category.origine%></h3>
+                <h3><%=category.disponible%></h3>
+                <p><%=category.description%> </p>
+                <a href="/produit/<%=category.id%>" class="btn">Decouvrir</a>
+            </div>
+            <% } %>
+    </div> </div>
+</body>
+</html>

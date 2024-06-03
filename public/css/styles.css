@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+body{ 
+    display: flex;
+    flex-direction: column;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3E1E04;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    max-width: 20%;
+}
+.btn-catalogue{
+    padding: 10px 20px;
+    background-color: #3E1E04;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    max-width: 20%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+.logo{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.logo img{
+    border: 2px dashed #3E1E04;
+    border-radius: 360px;
+    width: 50%;
+}
+h1{
+    font-size: 3rem;
+    color: #3E1E04;
+}
+.menu{
+    
+    overflow: hidden;
+}
+ .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+  
+.burger-menu div {
+    width: 2rem;
+    height: 0.25rem;
+    background: #333; 
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  } 
+
+  
+  
+nav  {
+    display: none;
+  }
+  
+nav.on {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #3E1E04;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: fixed;
+
+    
+  }
+
+nav a{
+    text-decoration: none;
+    color: #F7DBB9;
+  }
+
+.about{
+    max-width: 90%;
+    margin: auto;
+}
+
+.illustration img{
+    max-width: 100%;
+    height: auto;
+}
+.container-text {
+    border-bottom: 5px  #3E1E04 solid;
+    border-left: 5px  #3E1E04 solid;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+}
+.button-catalogue{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    
+}
+.container-news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+    
+}
+.decouvrir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #3E1E04; 
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    
+}
+.decouvrir img{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.decouvrir h3{
+    font-weight: bold;
+    height: 50px;
+    margin-top: 10px;
+}
+.decouvrir p{
+    height: 50px;
+    
+}
+.decouvrir a{
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    
+}
+.news{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+        /* CATALOGUE */
+
+.container-catalogue{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+.container-catalogue img{
+    width: 100%;
+    height: 100%;
+    
+}
+.container-catalogue h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hidden{
+    display: none;
+}
+
+/* PRODUIT */
+
+.illustration-produit{  
+    height: auto;
+    margin: auto;
+}
+.illustration-produit img{
+    max-width: 100%;
+    
+    
+}
+
+.container-produit{
+    max-width: 70%;
+    margin-left: 5%;
+    height: auto;
+    border: 3px dashed #3E1E04;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    gap: 10px;
+}
+.container-produit h2{
+    text-align: left;
+}
+.date{
+    position: absolute;
+    top: 0%;
+    right: 1%;
+}
+
+#title-category{
+    text-align: center;
+}
+@media (min-width: 900px) {
+    body{
+        gap: 20px;
+    }
+    header{
+       
+        
+    }
+    .logo {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        width: 30%;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .menu{
+        width: 90%;
+        background-color: #3E1E04;
+        
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;
+        color: #F7DBB9;
+        height: 100%;
+        font-size: 2.5rem;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .illustration img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .presentation{
+        text-align: center;
+        margin: auto;
+        font-size: 2rem;
+    }
+    .container-text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-news{
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 90%;
+        margin: auto;
+    }
+    .decouvrir{
+        width: 30%;
+    }
+    .display-decouvrir img{
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+    }
+    .display-decouvrir{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid #3E1E04;
+        width: 30%;
+        height: auto;
+    }
+
+    .display-news {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        max-width: 90%;
+        margin: auto;
+        gap: 20px;
+    }
+    
+    .display-news .decouvrir {
+        flex-basis: calc(33.33% - 6px); 
+        margin: 3px; 
+    }
+    .btn-catalogue{
+        padding: 10px 20px;
+        background-color: #3E1E04;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+        margin: auto;
+        max-width: 20%;
+        font-size: 2rem;
+    }
+}
