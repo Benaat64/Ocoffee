@@ -3,7 +3,7 @@ const dataMapper = require('../dataMapper.js');
 const filtreController = {
   allCategory: async (req, res) => {
     try {
-      const category = req.query.category  
+      const category = req.query.category 
       const categories = await dataMapper.getAllCategory(category);
       res.render('filtre',{categories, selectedCategory: category});
     } catch (error) {

@@ -1,7 +1,7 @@
 <%- include('header') %>
 <body>
     <div class="illustration-produit">
-        <img src="/img/<%=coffee.name%>.png">
+        <img src="/img/<%=coffee.reference%>.png">
         <h1></h1>
     </div>
  
@@ -18,9 +18,12 @@
 
         <p class="date">Publié le: <%= coffee.date %></p>
         <h2><%= coffee.description %></h2>
-        <a href="/produit/<%=coffee.id%>" class="btn">Catalogue</a>
+        <a href="/catalogue" class="btn">Catalogue</a>
+        <a href="/panier/add/<%=coffee.id%>" class="btn">Ajouter au panier</a>
     </div>
+
     
+ 
   
  <script src="/js/header.js"></script>
 </body>

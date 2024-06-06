@@ -33,6 +33,9 @@ const mainController = {
         res.status(500).send(`An error occured with the database :\n${error.message}`);
       }
     },
+    about: (req,res) => {
+      res.render('about');
+    }
 };
 
 module.exports = mainController;

@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #3E1E04;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: var(--black);
+  }
 
 body{ 
     display: flex;
@@ -20,6 +32,8 @@ a{
     text-align: center;
     margin: auto;
     max-width: 20%;
+    max-width: 50%;
+    border: none;
 }
 .btn-catalogue{
     padding: 10px 20px;
@@ -39,11 +53,13 @@ header{
     justify-content: space-between;
     width: 90%;
     margin: auto;
+    background-color: rgba(62, 30, 4,0.5);
 }
 .logo{
     display: block;
     margin: auto;
     text-align: center;
+    margin-left: 5px;
 }
 .logo img{
     border: 2px dashed #3E1E04;
@@ -55,9 +71,10 @@ h1{
     color: #3E1E04;
 }
 .menu{
-    
     overflow: hidden;
+    
 }
+
  .burger-menu {
     display: flex;
     flex-direction: column;
@@ -69,6 +86,7 @@ h1{
     cursor: pointer;
     padding: 0;
     z-index: 10;
+    position: fixed;
   }
   
 .burger-menu div {
@@ -91,18 +109,22 @@ nav.on {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #3E1E04;
-    height: auto;
+    height: 30%;
     max-width: 100%;
     overflow: hidden;
     position: fixed;
-
-    
-  }
+    padding: 30px;
+    position: absolute;
+    top: -35px;
+    right: 18px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    justify-content: space-around;
+}
 
 nav a{
     text-decoration: none;
-    color: #F7DBB9;
+    color: #3E1E04;
   }
 
 .about{
@@ -126,6 +148,9 @@ nav a{
 .button-catalogue{
     text-align: center;
 }
+.presentation{
+    font-size: 2rem;
+}
 
 h2{
     text-align: center;
@@ -135,12 +160,11 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    
-    
+    gap: 30px;
+    flex-wrap: wrap; 
 }
-.decouvrir{
+
+ .decouvrir{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,12 +173,14 @@ h2{
     height: auto;
     font-size: 1.5rem;
     border-radius: 5px;
+    margin: auto;
     
-}
+} 
 .decouvrir img{
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    max-height: 200px;
     height: auto;
+    object-fit: cover;
 }
 .decouvrir h3{
     font-weight: bold;
@@ -176,7 +202,9 @@ h2{
     gap: 20px;
 }
 
-
+.wtf{
+    display: none;
+}
         /* CATALOGUE */
 
 .container-catalogue{
@@ -196,11 +224,34 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    font-size: 5rem;
 }
 .hidden{
     display: none;
 }
-
+.news H2, .wtf, .swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3E1E04;
+}
+form{
+    margin: auto;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+select{
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(62, 30, 4,0.5);
+    padding: 10px;
+    color: #3E1E04;
+    
+}
+option{
+    padding: 10px; 
+}
 /* PRODUIT */
 
 .illustration-produit{  
@@ -224,19 +275,97 @@ h2{
     text-align: center;
     font-size: 2rem;
     gap: 10px;
+    padding: 30px;
+    border-radius: 0px 100px 0px 100px;
 }
 .container-produit h2{
     text-align: left;
 }
 .date{
     position: absolute;
-    top: 0%;
-    right: 1%;
+    top: 5%;
+    right: 3%;
 }
 
 #title-category{
     text-align: center;
 }
+
+/* ABOUT */
+
+.premier{
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto;
+    gap: 5%;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.deux{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 5%;
+    text-align: center;
+    align-items: center;
+}
+.premier img {
+    max-width: 45%;
+    height: auto;
+}
+.premier section{
+    width: 45%;
+
+}
+.deux img {
+    max-width: 45%;
+}
+.deux section{
+    width: 45%;
+}
+hr{
+    border-top: 2px solid #3E1E04;
+    width: 90%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #3E1E04;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #3E1E04;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.item-description {
+    display: flex;
+    align-items: center;
+}
+
+.item-title {
+    margin-left: 10px;
+}
+
+.item-subtotal {
+    margin: 0;
+}
+
 @media (min-width: 900px) {
     body{
         gap: 20px;
@@ -255,10 +384,12 @@ h2{
     }
     .burger-menu{
         display: none;
+
     }
     .menu{
         width: 90%;
         background-color: #3E1E04;
+        
         
     }
     nav{
@@ -267,19 +398,24 @@ h2{
         align-items: center;
         justify-content: space-around;
         gap: 10px;
-        color: #F7DBB9;
         height: 100%;
         font-size: 2.5rem;
+    }
+    nav a {
+        color:  #F7DBB9;
     }
 
     .about{
         display: flex;
         flex-direction: row-reverse;
+        gap: 30px;
+        align-items: center;
     }
 
     .illustration img{
         max-width: 100%;
-        height: auto;
+        height: 90%;
+        object-fit: cover;
     }
 
     .presentation{
@@ -290,6 +426,9 @@ h2{
     .container-text{
         display: flex;
         flex-direction: column;
+        border-bottom: none;
+        border-left: none;
+        
     }
 
     .container-news{
@@ -301,34 +440,7 @@ h2{
     .decouvrir{
         width: 30%;
     }
-    .display-decouvrir img{
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-    }
-    .display-decouvrir{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 2px solid #3E1E04;
-        width: 30%;
-        height: auto;
-    }
 
-    .display-news {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; 
-        justify-content: space-between;
-        max-width: 90%;
-        margin: auto;
-        gap: 20px;
-    }
-    
-    .display-news .decouvrir {
-        flex-basis: calc(33.33% - 6px); 
-        margin: 3px; 
-    }
     .btn-catalogue{
         padding: 10px 20px;
         background-color: #3E1E04;
@@ -340,4 +452,53 @@ h2{
         max-width: 20%;
         font-size: 2rem;
     }
+    .swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+        display: none;  
+    }
+    .wtf{
+        display: block;
+    }
+    .premier{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        gap: 5%;
+    }
+    
+    .deux{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        gap: 5%;
+    }
 }
+
+.swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+    padding: 50px;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background:#3E1E04 ;
+  }
+.swiper {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

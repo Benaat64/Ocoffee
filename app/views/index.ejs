@@ -1,5 +1,6 @@
 <%- include('header') %>
 <body>
+    
     <div class="about">
         <div class="illustration">
             <img src="img/about.jpg">
@@ -9,10 +10,30 @@
                 <h2>Jean et Jacques Pepper, deux frères passionnés par le café, sont les fondateurs de notre boutique.<br> Avec une expertise approfondie et un amour profond pour cette délicieuse boisson, ils ont créé un espace où le café est célébré comme une expérience raffinée et inspirante.</h2>
             </div>
             <a href="/catalogue" class="btn-catalogue">Voir le catalogue.</a>
-            </div>
-
         </div>
-    <div class="news">
+    </div>
+    
+    <div  class="swiper mySwiper">
+        
+        <h2>NEWS</h2>
+        
+        <div class="swiper-wrapper">
+            <% for(const coffee of coffees){ %>
+          <div class="swiper-slide">
+            <div class="decouvrir">
+                <img src="/img/<%=coffee.name%>.png">
+                <h3><%=coffee.name%></h3>
+                <p><%=coffee.description%> </p>
+                <a href="/produit/<%=coffee.id%>" class="btn">Decouvrir</a>
+            </div>
+          </div>
+          <% }%>
+        </div>
+        <div  class="swiper-pagination"></div>
+      </div>
+
+
+     <div class="wtf">
         <h2>NEWS</h2>
         <div class="container-news">
         <% for(const coffee of coffees){ %>
@@ -24,9 +45,17 @@
             </div>
        <% }%>
         </div>
-    </div>
+    </div> 
     
-  
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
  <script src="/js/header.js"></script>
 </body>
 </html>

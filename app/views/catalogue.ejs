@@ -4,55 +4,24 @@
         <img src="img/tata.png">
         <h1>NOTRE CATALOGUE</h1>
     </div>
-<form action="/filtre" method="get">
-    <select name="category" id="">
-        <option value="name">Nom</option>
-        <option value="origine">Origine</option>
-        <option value="caractéristique">Caractéristique</option>
-        <option value="disponible">Disponible</option>
-        <option value="reference">Reference</option>
-        <option value="prix">Prix</option>
-    </select>
-    <input type="submit" value="Chercher">
-</form>
+<%-include('select') %>
 
-    <div class="news">
-        <h2>RÉCENT</h2>
-        <div class="container-news">
-
-           
-                
-            
-           
-            <% for(const cof of cofs){ %>
-                <div class="decouvrir">
-                    <img src="/img/<%=cof.name%>.png">
-                    <h3><%=cof.name%></h3>
-                    <h3><%=cof.prix%>€</h3>
-                    <h3><%=cof.origine%></h3>
-                    <h3><%=cof.disponible%></h3>
-                    <p><%=cof.description%> </p>
-                    <a href="/produit/<%=cof.id%>" class="btn">Decouvrir</a>
-                    
-                </div>
-                <% } %>
-            
+<div class="news">
+    <h2>NEWS</h2>
+    <div class="container-news">
+    <% for(const cof of cofs){ %>
+        <div class="decouvrir">
+            <img src="/img/<%=cof.reference%>.png">
+            <h3><%=cof.name%></h3>
+            <p><%=cof.description%> </p>
+            <a href="/produit/<%=cof.id%>" class="btn">Decouvrir</a>
         </div>
+   <% }%>
     </div>
+</div>
     
-    <a href="/filtre" class="btn">Voir tout</a>
-        <!-- <div class="news hidden">
-            <div class="container-news hidden">
-                <% for(const coffee of coffees){ %>
-                    <div class="decouvrir hidden">
-                        <img src="/img/<%=coffee.name%>.png">
-                        <h3><%=coffee.name%></h3>
-                        <p><%=coffee.description%> </p>
-                        <a href="/produit/:<%=coffee.id%>" class="btn">Decouvrir</a>
-                    </div>
-                <% }%>
-            </div>
-        </div> -->
+    
+
   
  <script src="js/header.js"></script>
 </body>

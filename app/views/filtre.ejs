@@ -4,33 +4,50 @@
         <img src="img/tata.png">
         <h1>NOTRE CATALOGUE</h1>
     </div>
-    <h1 id="title-category"> Trié par:<%=selectedCategory%></h1>
-    <div class="news">
-
-        <form action="/filtre" method="get">
-            <select name="category" id="">
-                <option value="name">Nom</option>
-                <option value="origine">Origine</option>
-                <option value="caractéristique">Caractéristique</option>
-                <option value="disponible">Disponible</option>
-                <option value="reference">Reference</option>
-                <option value="prix">Prix</option>
-            </select>
-            <input type="submit" value="Chercher">
-        </form>
         
-    <div class="container-news">
-        <% for(const category of categories){ %>
+    <%-include('select') %>
+
+
+            
+        <div class="news">
+            <h2 > Trié par: <%=selectedCategory.toUpperCase()%></h2>
+            <div class="container-news">
+                <%let count = 0;
+                categories.forEach(category => {
+                    if (count >= 3) return;
+                    %>
+                <div class="decouvrir">
+                    <img src="/img/<%=category.reference%>.png">
+                    <h3><%=category.name%></h3>
+                    <h2><%=category.origine%> </h2>
+                    <h4><%=category.caractéristique%> </h4>
+                    <h2><%=category.prix%> €</h2>
+                    <p><%=category.description%> </p>
+                    <a href="/produit/<%=category.id%>" class="btn">Decouvrir</a>
+                </div>
+           <% count++})%>
+            </div>
+        </div>
+
+    <button class="btn-all btn">Voir tout</button>
+
+    <div id="all" class="news hidden">
+        <div  class="container-news ">
+            <% categories.forEach((category , index )=> { 
+                if(index < 3 ) return; %>
+            
             <div class="decouvrir">
-                <img src="/img/<%=category.name%>.png">
+                <img src="/img/<%=category.reference%>.png">
                 <h3><%=category.name%></h3>
-                <h3><%=category.prix%>€</h3>
-                <h3><%=category.origine%></h3>
-                <h3><%=category.disponible%></h3>
+                <h2><%=category.origine%> </h2>
+                <h2><%=category.prix%> €</h2>
                 <p><%=category.description%> </p>
                 <a href="/produit/<%=category.id%>" class="btn">Decouvrir</a>
             </div>
-            <% } %>
-    </div> </div>
+            <% })%>
+        </div>
+    </div>    
+
+<script src="/js/header.js"></script>
 </body>
 </html>
