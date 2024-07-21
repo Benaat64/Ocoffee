@@ -55,3 +55,20 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
    ```sh
    npm start
 
+## Utilisation
+
+Après avoir démarré le serveur, ouvrez votre navigateur et allez à l'adresse http://localhost:3000 pour voir le site en action.
+
+## Utilisation
+
+- Site vitrine responsive
+- Contenu dynamique généré à partir de la base de données
+- Architecture MVC
+- Connexion à une base de données PostgreSQL
+
+## Hard Skills
+
+- Développement d'une intégration d'un site vitrine responsive
+- Développement d'une interface aux contenus générés dynamiquement
+- Mise
+
