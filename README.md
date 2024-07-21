@@ -9,9 +9,8 @@ Ceci était un exercice pendant ma formation Full-Stack JS chez O'Clock. L'exerc
 3. [Installation](#installation)
 4. [Utilisation](#utilisation)
 5. [Fonctionnalités](#fonctionnalités)
-6. [Captures d'écran](#captures-décran)
-7. [Hard Skills](#hard-skills)
-8. [Licence](#licence)
+6. [Hard Skills](#hard-skills)
+
 
 ## Description
 
