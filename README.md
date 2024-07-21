@@ -60,7 +60,7 @@ Connectez-vous à PostgreSQL avec l'utilisateur approprié et créez une nouvell
    ```sh
    psql -U your_username -c "CREATE DATABASE your_database_name;"
    ```
-Exécutez le script SQL pour créer les tables nécessaires :
+   Exécutez le script SQL pour créer les tables nécessaires :
    ```sh
    psql -U your_username -d your_database_name -f data/create_db.sql  
    ```
