@@ -54,11 +54,11 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
 5. Créez la base de données et exécutez le script SQL 
 Connectez-vous à PostgreSQL avec l'utilisateur approprié et créez une nouvelle base de données (si ce n'est pas déjà fait) :
 ```sh
-psql -U your_username -c "CREATE DATABASE your_database_name;"
+   psql -U your_username -c "CREATE DATABASE your_database_name;"
 ```
 Exécutez le script SQL pour créer les tables nécessaires :
 ```sh
-psql -U your_username -d your_database_name -f data/create_db.sql
+   psql -U your_username -d your_database_name -f data/create_db.sql
 ```
 6. Démarrez le serveur :
    ```sh
