@@ -52,14 +52,14 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
    PORT=3000
 
 5. Créez la base de données et exécutez le script SQL 
-Connectez-vous à PostgreSQL avec l'utilisateur approprié et créez une nouvelle base de données (si ce n'est pas déjà fait) :
+Connectez-vous à PostgreSQL avec l'utilisateur approprié et créez une nouvelle base de données (si ce n'est pas déjà fait) :psql -U your_username -d your_database_name -f data/create_db.sql
    ```sh
    psql -U your_username -c "CREATE DATABASE your_database_name;"
 
 Exécutez le script SQL pour créer les tables nécessaires :
    ```sh
-   psql -U your_username -d your_database_name -f data/create_db.sql
-   ```
+   npm install
+```
 
 6. Démarrez le serveur :
    ```sh
