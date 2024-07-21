@@ -35,13 +35,17 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
 1. Clonez le dépôt :
    ```sh
    git clone git@github.com:Benaat64/Ocoffee.git
+   ```
+   
 2. Accédez au répertoire du projet :
    ```sh
    cd Ocoffee
+   ```
 
 3. Installez les dépendances : :
    ```sh
    npm install
+   ```
 4. Créez un fichier .env à la racine du projet et configurez-le avec vos informations de base de données et de serveur. Voici un exemple de configuration :
    ```sh
    DB_HOST=localhost
@@ -50,21 +54,20 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
    DB_NAME=your_database_name
    DB_PASSWORD=your_password
    PORT=3000
-
+   ```
 5. Créez la base de données et exécutez le script SQL 
-Connectez-vous à PostgreSQL avec l'utilisateur approprié et créez une nouvelle base de données (si ce n'est pas déjà fait) :psql -U your_username -d your_database_name -f data/create_db.sql
+Connectez-vous à PostgreSQL avec l'utilisateur approprié et créez une nouvelle base de données (si ce n'est pas déjà fait) :
    ```sh
    psql -U your_username -c "CREATE DATABASE your_database_name;"
-
+   ```
 Exécutez le script SQL pour créer les tables nécessaires :
    ```sh
-   npm install
-```
-
+   psql -U your_username -d your_database_name -f data/create_db.sql  
+   ```
 6. Démarrez le serveur :
    ```sh
    npm start
-
+   ```
 ## Utilisation
 
 Après avoir démarré le serveur, ouvrez votre navigateur et allez à l'adresse `http://localhost:3000` (ou au port que vous avez configuré dans le fichier `.env`) pour voir le site en action.
