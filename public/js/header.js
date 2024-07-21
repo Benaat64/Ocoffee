@@ -1,14 +1,19 @@
-const burgerMenu = document.querySelector('.burger-menu');
-const nav = document.querySelector('nav')
-const btn = document.querySelector('.btn-all')
-const container = document.querySelector('#all')
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const nav = document.querySelector('nav');
 
-burgerMenu.addEventListener('click',(evt) => {
-    nav.classList.toggle('on');
-})
+    function toggleNav() {
+        nav.classList.toggle('show');
+        burgerMenu.classList.toggle('active');
+    }
+    burgerMenu.addEventListener('click', toggleNav);
 
-btn.addEventListener('click', (evt) => {
-    container.classList.toggle('hidden');
-    btn.classList.toggle('hidden');
+    function handleResize() {
+        if (window.innerWidth >= 768) { 
+            nav.classList.remove('show');
+            burgerMenu.classList.remove('active');
+        }
+    }
+
+    window.addEventListener('resize', handleResize);
 });
-
