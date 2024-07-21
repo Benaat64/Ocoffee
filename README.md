@@ -80,9 +80,6 @@ Après avoir démarré le serveur, ouvrez votre navigateur et allez à l'adresse
 - Architecture MVC
 - Connexion à une base de données PostgreSQL
 
-## Fonctionnalités
-![Texte alternatif](chemin/vers/l'image.png)
-
 ## Hard Skills
 
 - Développement d'une intégration d'un site vitrine responsive
