@@ -35,3 +35,23 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
 1. Clonez le dépôt :
    ```sh
    git clone https://url-du-depot.git
+2. Accédez au répertoire du projet :
+   ```sh
+   cd nom-du-projet
+
+3. Installez les dépendances : :
+   ```sh
+   npm install
+4. Créez un fichier .env à la racine du projet et configurez-le avec vos informations de base de données et de serveur. Voici un exemple de configuration :
+   ```sh
+   DB_HOST=localhost
+   DB_USER=your_username
+   DB_PORT=5432
+   DB_NAME=your_database_name
+   DB_PASSWORD=your_password
+   PORT=3000
+
+5. Démarrez le serveur :
+   ```sh
+   npm start
+
