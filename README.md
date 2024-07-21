@@ -4,14 +4,26 @@ Ceci était un exercice pendant ma formation Full-Stack JS chez O'Clock. L'exerc
 [Le projet](./docs/demande-client/)
 
 ## Table des matières
+<<<<<<< HEAD
 - [O'Coffee](#ocoffee)
   - [Table des matières](#table-des-matières)
   - [Description](#description)
   - [Technologies](#technologies)
   - [Installation](#installation)
+- [cd Ocoffee](#cd-ocoffee)
   - [Utilisation](#utilisation)
   - [Utilisation](#utilisation-1)
   - [Hard Skills](#hard-skills)
+- [O'Coffee](#ocoffee)
+  - [Table des matières](#table-des-matières)
+  - [Description](#description)
+  - [Technologies](#technologies)
+  - [Installation](#installation)
+- [cd Ocoffee](#cd-ocoffee)
+  - [Utilisation](#utilisation)
+  - [Utilisation](#utilisation-1)
+  - [Hard Skills](#hard-skills)
+>>>>>>> 03610f2c105494b0a5a1d0567a415f13babb3071
 
 ## Description
 
@@ -34,10 +46,17 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
 
 1. Clonez le dépôt :
    ```sh
+<<<<<<< HEAD
    git clone git@github.com:Benaat64/Ocoffee.git
 2. Accédez au répertoire du projet :
    ```sh
    cd Ocoffee
+=======
+   git clone https://url-du-depot.git
+2. Accédez au répertoire du projet :
+   ```sh
+   cd nom-du-projet
+>>>>>>> 03610f2c105494b0a5a1d0567a415f13babb3071
 
 3. Installez les dépendances : :
    ```sh
