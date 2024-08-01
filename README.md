@@ -83,5 +83,4 @@ Après avoir démarré le serveur, ouvrez votre navigateur et allez à l'adresse
 
 - Développement d'une intégration d'un site vitrine responsive
 - Développement d'une interface aux contenus générés dynamiquement
-- Mise
 
